@@ -1,0 +1,21 @@
+{
+  "name" :"Google Search Tabs",
+  "version" :"2.0",
+  "description" :"Open new tabs after a Google Search",
+  "permissions": ["declarativeContent", "storage", "tabs"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "js": ["jquery-3.4.1.min.js", "content.js"]
+    }
+  ],
+  "manifest_version": 2,
+  "page_action" :
+  {
+    "popup" :"popup.html"
+  }
+}
