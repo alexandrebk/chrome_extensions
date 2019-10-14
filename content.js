@@ -4,9 +4,10 @@ const nodelist = document.querySelectorAll(".rc");
 const results = Array.from(nodelist)
 console.log(results);
 
-results.splice(1, 9);
+const firstResult = results.slice(0, 1);
 console.log(results);
-results.forEach((item) => {
+console.log(firstResult);
+firstResult.forEach((item) => {
   const link = item.getElementsByTagName('a');
   console.log(link[0].attributes.href.value);
   const url = link[0].attributes.href.value;
